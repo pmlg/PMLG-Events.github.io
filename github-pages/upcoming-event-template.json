@@ -1,0 +1,16 @@
+{
+  "id": "2026-09-17-pmlg-example",
+  "title": "Example PMLG event title",
+  "date": "2026-09-17",
+  "time": "6:00 PM",
+  "endTime": "8:00 PM",
+  "timezone": "AWST",
+  "location": "Perth, Western Australia",
+  "description": "A concise description of the talk, workshop, or peer-learning session.",
+  "organisers": ["PMLG"],
+  "topics": ["Machine learning", "Peer learning"],
+  "url": "",
+  "slidesUrl": "",
+  "paperUrl": "",
+  "repoUrl": ""
+}
