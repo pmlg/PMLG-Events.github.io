@@ -1,0 +1,29 @@
+# PMLG GitHub Pages bundle
+
+This folder is the compiled, static deployment for the Perth Machine Learning Group website.
+
+## Deploy with a repository branch
+
+Copy the contents of this folder—not the folder itself—to the root of the GitHub Pages repository, commit, and push. In the repository settings, select **Settings → Pages → Deploy from a branch**, then choose the branch and `/ (root)` folder.
+
+The bundle includes `index.html`, `404.html`, `.nojekyll`, compiled JavaScript and CSS, the PMLG logo, and the embedded 379-record local event archive. It intentionally excludes raw MHTML source pages, project source files, development tooling, and server code.
+
+The compiled paths assume a root-hosted site, such as a custom domain (`pmlg.com.au`) or `pmlg.github.io`. If you deploy as a project site under `username.github.io/repository-name/`, rebuild the project with a matching Vite `base` path before publishing.
+
+## Deploy with GitHub Actions
+
+Alternatively, upload this folder as the artifact for a Pages deployment workflow. The artifact root must contain `index.html` directly.
+
+## Custom domain
+
+After the first deployment, add `pmlg.com.au` in **Settings → Pages → Custom domain**, then configure DNS with your registrar. Do not add a `CNAME` file to this bundle until the final domain is confirmed.
+
+## Local preview
+
+Serve the folder with any static server, for example:
+
+```bash
+python3 -m http.server 8080
+```
+
+Then open `http://localhost:8080/`.
