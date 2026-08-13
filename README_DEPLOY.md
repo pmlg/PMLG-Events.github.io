@@ -8,7 +8,7 @@ Copy the contents of this folder—not the folder itself—to the root of the Gi
 
 The bundle includes `index.html`, `404.html`, `.nojekyll`, compiled JavaScript and CSS, the PMLG logo, and the embedded 379-record local event archive. It intentionally excludes raw MHTML source pages, project source files, development tooling, and server code.
 
-The compiled paths assume a root-hosted site, such as a custom domain (`pmlg.com.au`) or `pmlg.github.io`. If you deploy as a project site under `username.github.io/repository-name/`, rebuild the project with a matching Vite `base` path before publishing.
+This bundle is compiled for the project site `https://pmlg.github.io/PMLG-Events.github.io/`. Copy the bundle contents to the repository root; do not change the asset paths.
 
 ## Deploy with GitHub Actions
 
