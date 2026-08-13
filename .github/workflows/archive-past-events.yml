@@ -2,7 +2,7 @@ name: Archive Past Events
 
 on:
   schedule:
-    - cron: '30 0 * * *' # Run daily at 00:30 UTC
+    - cron: '0 12 * * *' # Run daily at 12:00 UTC (8:00 PM AWST Perth time)
   workflow_dispatch: # Allows manual trigger from GitHub Actions UI
 
 permissions:
@@ -30,6 +30,6 @@ jobs:
         run: |
           git config --global user.name "PMLG Automation Bot"
           git config --global user.email "bot@pmlg.com.au"
-          git add client/public/upcoming-events.json client/src/data/events-archive.json
+          git add upcoming-events.json events-archive.json
           git diff --staged --quiet || git commit -m "chore: auto-archive past events [skip ci]"
           git push

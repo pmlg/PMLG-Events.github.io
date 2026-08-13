@@ -1,4 +1,4 @@
-"""Automated script to migrate past events from upcoming-events.json into the permanent event archive."""
+"""Automated script to migrate past events from upcoming-events.json into events-archive.json at the repository root."""
 
 from __future__ import annotations
 
@@ -7,8 +7,8 @@ from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-UPCOMING_PATH = ROOT / "client" / "public" / "upcoming-events.json"
-ARCHIVE_PATH = ROOT / "client" / "src" / "data" / "events-archive.json"
+UPCOMING_PATH = ROOT / "upcoming-events.json"
+ARCHIVE_PATH = ROOT / "events-archive.json"
 
 
 def main() -> None:
@@ -41,7 +41,6 @@ def main() -> None:
             continue
 
         if event_date < today:
-            # Past event: migrate to archive if not already present
             event["status"] = "past"
             event_id = event.get("id")
             if event_id not in existing_ids:
@@ -53,7 +52,6 @@ def main() -> None:
             active_upcoming.append(event)
 
     if migrated_count > 0:
-        # Sort archive descending by date
         archive_raw.sort(key=lambda x: x.get("date", ""), reverse=True)
         ARCHIVE_PATH.write_text(json.dumps(archive_raw, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
         UPCOMING_PATH.write_text(json.dumps(active_upcoming, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")

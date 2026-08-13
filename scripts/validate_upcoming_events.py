@@ -7,7 +7,7 @@ import json
 from datetime import date
 from pathlib import Path
 
-path = Path(__file__).resolve().parents[1] / "client" / "public" / "upcoming-events.json"
+path = Path(__file__).resolve().parents[1] / "upcoming-events.json"
 required = {"id", "title", "date", "description"}
 feed = json.loads(path.read_text(encoding="utf-8"))
 if not isinstance(feed, list):

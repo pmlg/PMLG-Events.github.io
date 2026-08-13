@@ -80,8 +80,19 @@ def main() -> None:
     (OUTPUT_ROOT / ".nojekyll").write_text("", encoding="utf-8")
     (OUTPUT_ROOT / "README_DEPLOY.md").write_text(DEPLOY_README, encoding="utf-8")
 
-    archive_path = PROJECT / "client" / "src" / "data" / "events-archive.json"
+    archive_path = PROJECT / "events-archive.json"
+    if not archive_path.exists():
+        archive_path = PROJECT / "client" / "src" / "data" / "events-archive.json"
     archive = json.loads(archive_path.read_text(encoding="utf-8"))
+    shutil.copy2(archive_path, OUTPUT_ROOT / "events-archive.json")
+    upcoming_path = PROJECT / "upcoming-events.json"
+    if not upcoming_path.exists():
+        upcoming_path = PROJECT / "client" / "public" / "upcoming-events.json"
+    if upcoming_path.exists():
+        shutil.copy2(upcoming_path, OUTPUT_ROOT / "upcoming-events.json")
+    template_path = PROJECT / "client" / "public" / "upcoming-event-template.json"
+    if template_path.exists():
+        shutil.copy2(template_path, OUTPUT_ROOT / "upcoming-event-template.json")
     manifest = {
         "generatedAt": datetime.now(timezone.utc).isoformat(),
         "deploymentBase": "/PMLG-Events.github.io/",
