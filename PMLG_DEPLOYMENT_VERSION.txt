@@ -1,3 +1,3 @@
-PMLG deployment build
-Fix set: chronological upcoming events, Eventbrite ticket routing, independent Eventbrite and Code Repo links
+PMLG final deployable export
+Single Eventbrite ticket action; separate resource links
 Build date: 2026-08-24
