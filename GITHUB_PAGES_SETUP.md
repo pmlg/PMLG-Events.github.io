@@ -115,6 +115,7 @@ The PMLG website features a dynamic event lifecycle designed to keep the site ev
   "location": "State Library of WA, Perth",
   "description": "Detailed description of the talk, workshop, or publication.",
   "topics": ["Machine learning", "Transformers"],
+  "url": "https://www.eventbrite.com.au/e/event-ticket-page",
   "slidesUrl": "https://...",
   "paperUrl": "https://...",
   "repoUrl": "https://github.com/..."
