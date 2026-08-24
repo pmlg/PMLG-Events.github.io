@@ -1,0 +1,35 @@
+name: Archive Past Events
+
+on:
+  schedule:
+    - cron: '0 12 * * *' # Run daily at 12:00 UTC (8:00 PM AWST Perth time)
+  workflow_dispatch: # Allows manual trigger from GitHub Actions UI
+
+permissions:
+  contents: write
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run archive migration script
+        run: python3 scripts/archive_past_events.py
+
+      - name: Validate remaining upcoming events and archive
+        run: python3 scripts/validate_upcoming_events.py
+
+      - name: Commit and push changes if any past events were archived
+        run: |
+          git config --global user.name "PMLG Automation Bot"
+          git config --global user.email "bot@pmlg.com.au"
+          git add upcoming-events.json events-archive.json
+          git diff --staged --quiet || git commit -m "chore: auto-archive past events [skip ci]"
+          git push
