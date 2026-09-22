@@ -1,27 +1,5 @@
 [
   {
-    "id": "2026-09-21-pmlg-Harnesses",
-    "title": "The Harness Is the Asset: Agentic Systems That Outlive the Session",
-    "date": "2026-09-21",
-    "time": "5:00 PM",
-    "endTime": "8:00 PM",
-    "timezone": "AWST",
-    "location": "Microsoft Office, Level 10, 100 St Georges Terrace, Perth, Western Australia",
-    "description": "Most of us meet AI agents inside a coding tool, where the loop ends when the tests go green. A harness is what you build when the work has to continue after the session closes: memory, scheduling, channels, approvals and rules that survive a model swap./n/n Vladimir covers the two kinds of harness, coding and agentic, what the off-the-shelf options give you today, and then opens up the one he built and runs daily across client delivery, research and the rest of his week. Half slides, half live demo, including where it breaks.",
-    "organisers": [
-      "PMLG"
-    ],
-    "topics": [
-      "Machine learning",
-      "AI Harness",
-      "Coding"
-    ],
-    "url": "https://www.eventbrite.com.au/e/the-harness-is-the-asset-agentic-systems-that-outlive-the-session-tickets-1998736337189",
-    "slidesUrl": "",
-    "paperUrl": "",
-    "repoUrl": "https://vvorotilov-ai-au.github.io/cv-2026/"
-  },
-  {
     "id": "2026-10-22-pmlg-RL",
     "title": "Teaching LLMs Expert Judgment: A Chess RL Case Study",
     "date": "2026-10-22",
