@@ -1,5 +1,28 @@
 [
   {
+    "id": "2026-10-22-pmlg-RL",
+    "title": "Teaching LLMs Expert Judgment: A Chess RL Case Study",
+    "date": "2026-10-22",
+    "time": "5:00 PM",
+    "endTime": "8:00 PM",
+    "timezone": "AWST",
+    "location": "Microsoft Office, Level 10, 100 St Georges Terrace, Perth, Western Australia",
+    "description": "Expert judgment can't be articulated into a prompt it has to be trained in. Fine-tuning a smaller model on expert-labeled data beats a larger, smarter frontier model because the judgment is tacit, not explicit.\n\nHow do you get a 1.7B parameter language model to play chess at an expert level without just memorising moves? This talk walks through a practical pipeline for fine-tuning small LLMs to develop genuine reasoning capabilities, using chess as a controlled, measurable testbed.\n\n I'll cover the full training stack: supervised fine-tuning on game transcripts, GRPO reinforcement learning with Stockfish as an automated reward signal, and off-policy techniques (LUFFY) to squeeze more learning from limited compute. Along the way, we'll tackle questions that apply far beyond chess: How small can a model be and still reason? Does RL actually teach new capabilities, or just sharpen what SFT already learned? And what happens when your reward function is an engine 1000 Elo stronger than your model? /n/n The talk also draws on recent results from Thinking Machines Lab and Bridgewater, where fine-tuned Qwen3-235B outperformed all frontier models (GPT, Claude, Gemini) on expert financial judgment tasks at 13.8 lower cost showing that the same principles transfer from chess to real-world expert decision-making. /n/n Bio:/n/n Ibrahim El-Fayoumi is a Perth-based machine learning practitioner whose work bridges the gap between theoretical research and industrial application. He is new talk is exploring reinforcement learning for small language models, training Qwen3-1.7B to play chess using Stockfish as a reward signal a controlled testbed for understanding whether RL teaches genuine reasoning or just pattern matching",
+    "organisers": [
+      "PMLG"
+    ],
+    "topics": [
+      "Machine learning",
+      "RL",
+      "Coding"
+    ],
+    "url": "https://www.eventbrite.com.au/e/teaching-llms-expert-judgment-a-chess-rl-case-study-tickets-1998735759461",
+    "slidesUrl": "",
+    "paperUrl": "",
+    "repoUrl": "",
+    "status": "past"
+  },
+  {
     "id": "2026-09-21-pmlg-Harnesses",
     "title": "The Harness Is the Asset: Agentic Systems That Outlive the Session",
     "date": "2026-09-21",
